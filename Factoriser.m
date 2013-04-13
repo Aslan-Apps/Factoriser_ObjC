@@ -1,27 +1,5 @@
-Factoriser_ObjC
-===============
-
-Factorisation example written in Objective-C 
-
-
-Documentation
-==============
-
-Factorise a given integer into an array
-```
-- (NSArray *) factorise: (int) n;
-```
-print the factors in the array using printf()
-```
-- printFactors: (NSArray *) factors	forInt: (int) n;		
-```
-
-Copyright
-==============
-
-```
 /*
- * Factoriser_ObjC
+ * Factoriser.m
  *
  * Created by Oguzhan Cansin Gungor on 14/04/13.
  *
@@ -56,4 +34,60 @@ Copyright
  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-```
+
+#import "Factoriser.h"
+#include <stdio.h>
+
+@implementation Factoriser
+
+
+- (NSArray *) factorise: (int) n {
+	// create an array for factors
+	NSMutableArray *factors = [NSMutableArray new];
+    int i = n;
+	int c;
+	for (c = 2;  n > 1 && c*c <= n;  c++) {
+		while (n % c == 0) {
+			NSNumber *factor = [NSNumber numberWithInt: c];
+
+			[factors addObject: factor];
+            
+			n /= c;		
+		}
+	}
+	
+	if (n > 1)
+		[factors addObject: [NSNumber numberWithInt: n] ];
+    
+    [self printFactors: factors forInt: i];
+
+
+	return [factors autorelease];
+}
+
+
+- printFactors: (NSArray *) factors	forInt: (int) n {
+    
+	NSAutoreleasePool *pool = [NSAutoreleasePool new];
+	NSEnumerator *e = [factors objectEnumerator];
+	NSNumber *factor = [e nextObject];
+	
+	printf("%d = ", n);
+	
+	while (factor)
+	{
+		printf("%d", [factor intValue]);
+		
+		factor = [e nextObject];
+		
+		if (factor)
+			printf(" * ");
+	}
+	printf("\n");
+
+	[pool release];		
+
+	return self;
+}
+
+@end

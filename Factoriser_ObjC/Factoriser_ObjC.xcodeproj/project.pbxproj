@@ -10,6 +10,7 @@
 		5674C73B171A0E920046E9C2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5674C73A171A0E920046E9C2 /* Foundation.framework */; };
 		5674C73E171A0E920046E9C2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5674C73D171A0E920046E9C2 /* main.m */; };
 		5674C742171A0E920046E9C2 /* Factoriser_ObjC.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5674C741171A0E920046E9C2 /* Factoriser_ObjC.1 */; };
+		56E44B46171A255600550078 /* Factoriser.m in Sources */ = {isa = PBXBuildFile; fileRef = 56E44B45171A255600550078 /* Factoriser.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -31,6 +32,8 @@
 		5674C73D171A0E920046E9C2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5674C740171A0E920046E9C2 /* Factoriser_ObjC-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Factoriser_ObjC-Prefix.pch"; sourceTree = "<group>"; };
 		5674C741171A0E920046E9C2 /* Factoriser_ObjC.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = Factoriser_ObjC.1; sourceTree = "<group>"; };
+		56E44B44171A255600550078 /* Factoriser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Factoriser.h; path = ../Factoriser.h; sourceTree = "<group>"; };
+		56E44B45171A255600550078 /* Factoriser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Factoriser.m; path = ../Factoriser.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,6 +51,8 @@
 		5674C72E171A0E920046E9C2 = {
 			isa = PBXGroup;
 			children = (
+				56E44B44171A255600550078 /* Factoriser.h */,
+				56E44B45171A255600550078 /* Factoriser.m */,
 				5674C73C171A0E920046E9C2 /* Factoriser_ObjC */,
 				5674C739171A0E920046E9C2 /* Frameworks */,
 				5674C738171A0E920046E9C2 /* Products */,
@@ -140,6 +145,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5674C73E171A0E920046E9C2 /* main.m in Sources */,
+				56E44B46171A255600550078 /* Factoriser.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -240,6 +246,7 @@
 				5674C747171A0E920046E9C2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -7,16 +7,19 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Factoriser.h"
 
 int main(int argc, const char * argv[])
 {
 
     @autoreleasepool {
+        Factoriser *f = [[Factoriser alloc] init];
         
-        // insert code here...
-        NSLog(@"Hello, World!");
+        [f factorise:1000];
+        
+        [f release];
         
     }
-    return 0;
+    return EXIT_SUCCESS;
 }
 

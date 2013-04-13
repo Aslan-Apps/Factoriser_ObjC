@@ -1,27 +1,5 @@
-Factoriser_ObjC
-===============
-
-Factorisation example written in Objective-C 
-
-
-Documentation
-==============
-
-Factorise a given integer into an array
-```
-- (NSArray *) factorise: (int) n;
-```
-print the factors in the array using printf()
-```
-- printFactors: (NSArray *) factors	forInt: (int) n;		
-```
-
-Copyright
-==============
-
-```
 /*
- * Factoriser_ObjC
+ * Factoriser.h
  *
  * Created by Oguzhan Cansin Gungor on 14/04/13.
  *
@@ -56,4 +34,15 @@ Copyright
  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-```
+
+#import <Foundation/Foundation.h>
+
+@interface Factoriser: NSObject
+
+// factorise a given integer
+- (NSArray *) factorise: (int) n;
+
+//print the factors in the array using printf()
+- printFactors: (NSArray *) factors	forInt: (int) n;		
+
+@end
